@@ -1,21 +1,22 @@
 <?php
-         ini_set('display_erros', 1); ini_set('display_startup_erros', 1); erro_reporting(E_ALL);
-         
-        //verifica se existe conexao com bd,caso nao tenta criar uma nova
-        $conexao = mysqli_connect("localhost","root","") //porta, usuario, senha
-        or die("Erro na conexao com banco de dados");//caso nao consiga conectar mostra a 
-                                                    //mensagem de erro mostrada na conexao
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-        $select_db = mysqli_select_db($conexao, "novo"); //seleciona o banco de dados
+//verifica se existe conexão com bd, caso não tenta criar uma nova
+$conexao = mysqli_connect("localhost", "denisson", "123456") // porta, usuário, senha
+or die("Erro na conexão com banco de dados"); // caso não consiga conectar mostra a mensagem de erro
 
-        //abaixo atribuimos os valores provenientes do formulario pelo metodo POST
-        $nome = $_POST["nome"];
-        $user = $_POST["user"];
-        $eamail = $_POST["email"];
+$select_db = mysqli_select_db($conexao, "novo"); // seleciona o banco de dados
 
-        $string_sql = "INSERT INTO pessoa (id,nome,user,email) VALUE (null, '$nome', '$user','$email')";
-        
-        mysqli_query($conexao, $string_sql); //realizar a consulta
+// Abaixo atribuímos os valores provenientes do formulário pelo método POST
+$nome = $_POST["nome"];
+$user = $_POST["user"];
+$email = $_POST["email"];
+
+$string_sql = "INSERT INTO pessoa (id,nome,user,email) VALUES (null, '$nome', '$user', '$email')";
+
+mysqli_query($conexao, $string_sql); // Realiza a consulta
 
         if (mysqli_affected_rows($conexao) == 1) { // Verifica se foi afetada alguma linha, nesse caso inserida alguma linha
     echo "<p>Cadastro feito com sucesso.</p>";
