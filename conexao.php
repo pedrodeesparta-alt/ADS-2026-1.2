@@ -8,9 +8,10 @@ class Conexao { private static $instancia = null;
        } catch (PDOException $e) {
         die("Erro na conexão ao bd: " . $e->getMessage());
        }
-   }
-   return self::$instancia;
-}
+          }
+
+        return self::$instancia;
+    }
+} 
 
 ?>
-      
