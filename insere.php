@@ -14,17 +14,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($pessoa->inserir()) {
         echo "<p>Cadastro feito com sucesso.</p>";
-        echo '<a href="index.html">Voltar para home</a><br>';
-        header("refresh: 3; url=index.html");
+        echo '<a href="index.php">Voltar para home</a><br>';
+        header("refresh: 3; url=index.php");
         echo 'redirecionando para a pagina em 3 segundos';
 }else {
         echo "<p>Erro, não foi possível inserir no banco de dados</p>";
-        echo '<a href="index.html">Voltar para home</a><br>';
-        header("refresh: 3; url=index.html");
+        echo '<a href="index.php">Voltar para home</a><br>';
+        header("refresh: 3; url=index.php");
         echo 'redirecionando para a pagina em 3 segundos';
     }
 } else {
-    header("Location: index.html");
+    header("Location: index.php");
     exit();
 }
 ?>

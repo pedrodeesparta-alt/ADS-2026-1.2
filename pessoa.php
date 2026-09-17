@@ -30,7 +30,18 @@ class Pessoa {
             return false;
         }
     }
+    //Metodo consultar todos
+    public static function Listartodos() {
+        try {
+            $pdo = Conexao::getConexao();
+            $sql = "SELECT * FROM pessoa";
+            $stmt = $pdo->query($sql);
 
+    //Retorna um array com todos os registros 
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            return [];
+        }
+    }
 }
 ?>
-  
