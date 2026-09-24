@@ -1,131 +1,4 @@
-/* altera.css - Tema Dark Mode *//* altera.css - Estilo Dark Mode */
-
-/* Configurações Gerais da Página */
-body {
-    background-color: #121212;
-    color: #e0e0e0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 20px;
-    line-height: 1.6;
-}
-
-/* Títulos */
-h1, h2, h3 {
-    color: #4da6ff;
-    border-bottom: 2px solid #333;
-    padding-bottom: 8px;
-    margin-bottom: 20px;
-}
-
-/* Links */
-a {
-    color: #80b3ff;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-a:hover {
-    color: #4da6ff;
-    text-decoration: underline;
-}
-
-/* Formulários e Inputs */
-form {
-    background-color: #1e1e1e;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    max-width: 450px;
-    margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    margin-bottom: 6px;
-    color: #b0b0b0;
-    font-weight: bold;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="number"],
-input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #333;
-    border-radius: 4px;
-    background-color: #2b2b2b;
-    color: #ffffff;
-    box-sizing: border-box;
-    font-size: 14px;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus {
-    border-color: #4da6ff;
-    outline: none;
-}
-
-/* Botões */
-input[type="submit"], 
-button {
-    background-color: #0066cc;
-    color: #ffffff;
-    border: none;
-    padding: 10px 18px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-input[type="submit"]:hover, 
-button:hover {
-    background-color: #0052a3;
-}
-
-/* Tabela de Consulta */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: #1e1e1e;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
-    overflow: hidden;
-    margin-top: 15px;
-}
-
-th, td {
-    padding: 12px 15px;
-    text-align: left;
-    border-bottom: 1px solid #333;
-}
-
-th {
-    background-color: #2a2a2a;
-    color: #4da6ff;
-    font-weight: 600;
-}
-
-tr:hover {
-    background-color: #252525;
-}
-
-/* Blocos de Código e Pre (caso exiba trechos de código) */
-pre, code {
-    background-color: #252526;
-    color: #d4d4d4;
-    border: 1px solid #333;
-    border-radius: 6px;
-    padding: 12px;
-    display: block;
-    overflow-x: auto;
-}
-
-/* Reset de margens e estilos globais */
+/* Reset Básico */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -133,136 +6,185 @@ pre, code {
 }
 
 body {
-    background-color: #121212;
-    color: #e0e0e0;
+    background-color: #0f172a;
+    color: #e2e8f0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     min-height: 100vh;
+    padding: 40px 20px;
 }
 
-/* Card/Container do Formulário */
-.container {
-    background-color: #1e1e1e;
-    padding: 30px 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+/* Container de Tabelas e Formulários */
+.container,
+.card-form,
+.container-table {
+    background-color: #1e293b;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
     width: 100%;
-    max-width: 400px;
+    max-width: 900px;
 }
 
-/* Título */
-h3 {
-    color: #4da6ff;
+/* Cabeçalho da Lista com Botão */
+.header-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #334155;
+    padding-bottom: 15px;
+}
+
+.header-action h3 {
+    color: #38bdf8;
     font-size: 22px;
-    margin-bottom: 24px;
+    font-weight: 600;
+}
+
+.btn-novo {
+    background-color: #0284c7;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.btn-novo:hover {
+    background-color: #0369a1;
+}
+
+/* Tabela Estilizada */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th {
+    background-color: #0f172a;
+    color: #94a3b8;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 14px 16px;
+    border-bottom: 2px solid #334155;
+}
+
+td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #334155;
+    font-size: 14px;
+    color: #cbd5e1;
+}
+
+tr:hover {
+    background-color: #334155;
+}
+
+/* Crachás e Tags de Texto */
+.badge-id {
+    color: #64748b;
+    font-weight: bold;
+}
+
+.user-tag {
+    color: #a855f7;
+    font-weight: 500;
+}
+
+/* Célula e Botões de Ação */
+.actions-cell {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.text-center {
     text-align: center;
-    border-bottom: 2px solid #333;
-    padding-bottom: 10px;
 }
 
-/* Grupos de entrada de dados */
+.btn-action {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.btn-action:hover {
+    opacity: 0.85;
+}
+
+.btn-edit {
+    background-color: #eab308;
+    color: #0f172a;
+}
+
+.btn-delete {
+    background-color: #ef4444;
+    color: #ffffff;
+}
+
+.no-records {
+    text-align: center;
+    color: #64748b;
+    padding: 30px;
+}
+
+/* Estilos de Entrada (Para Formulários) */
 .input-group {
     margin-bottom: 18px;
 }
 
 label {
     display: block;
-    margin-bottom: 8px;
-    color: #b0b0b0;
+    margin-bottom: 6px;
+    color: #94a3b8;
     font-size: 14px;
-    font-weight: 500;
 }
 
-/* Campos de texto/email */
 input[type="text"],
 input[type="email"] {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #333;
+    padding: 10px 12px;
+    border: 1px solid #334155;
     border-radius: 6px;
-    background-color: #2b2b2b;
+    background-color: #0f172a;
     color: #ffffff;
     font-size: 14px;
-    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus {
-    border-color: #4da6ff;
-    box-shadow: 0 0 6px rgba(77, 166, 255, 0.4);
+    border-color: #38bdf8;
     outline: none;
 }
 
-/* Botão Cadastrar */
 input[type="submit"] {
     width: 100%;
-    background-color: #0066cc;
+    background-color: #0284c7;
     color: #ffffff;
     border: none;
     padding: 12px;
     border-radius: 6px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
-    margin-top: 10px;
-    transition: background-color 0.3s;
+    transition: background-color 0.2s;
 }
 
 input[type="submit"]:hover {
-    background-color: #0052a3;
-}
-}
-
-/* Grupos de entrada de dados */
-.input-group {
-    margin-bottom: 18px;
-}
-
-label {
-    display: block;
-    margin-bottom: 8px;
-    color: #b0b0b0;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-/* Campos de texto/email */
-input[type="text"],
-input[type="email"] {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #333;
-    border-radius: 6px;
-    background-color: #2b2b2b;
-    color: #ffffff;
-    font-size: 14px;
-    transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus {
-    border-color: #4da6ff;
-    box-shadow: 0 0 6px rgba(77, 166, 255, 0.4);
-    outline: none;
-}
-
-/* Botão Cadastrar */
-input[type="submit"] {
-    width: 100%;
-    background-color: #0066cc;
-    color: #ffffff;
-    border: none;
-    padding: 12px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: 10px;
-    transition: background-color 0.3s;
-}
-
-input[type="submit"]:hover {
-    background-color: #0052a3;
+    background-color: #0369a1;
 }
